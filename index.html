@@ -1,63 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Character encoding for proper text rendering -->
-  <meta charset="UTF-8">
+  <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333333;
+            font-size: 16px;
+        }
 
-  <!-- Page title shown in browser tab and screen readers -->
+        header {
+            color: #2c3e50;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #34495e;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: #555555;
+        }
+
+        nav a {
+            color: #2c3e50;
+            font-size: 1em;
+        }
+
+        a[aria-current="page"] {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        ul {
+            color: #333333;
+        }
+
+        p {
+            color: #555555;
+            font-size: 1em;
+        }
+
+        footer {
+            color: #777777;
+            font-size: 0.9em;
+        }
+    </style>
+
+<head>
+  <meta charset="UTF-8">
   <title>Don Norman – Home</title>
 </head>
 <body>
 
-  <!-- Page header: identifies the site and its purpose -->
+  <!-- Header -->
   <header>
     <h1>Don Norman</h1>
     <p>Human–Computer Interaction Philosopher</p>
   </header>
 
-  <!-- Primary navigation landmark for keyboard and screen reader users -->
+  <!-- Navigation -->
   <nav aria-label="Primary navigation">
     <ul>
-      <!-- Current page is indicated using aria-current -->
-      <li>
-        <a href="index.html" aria-current="page">Home</a>
-      </li>
-
-      <!-- Navigation links to other site sections -->
+      <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="cv.html">CV</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
-      <li><a href="assignment01.html">Lab 01 Rules</a></li>
-
+      <li><a href="norman-sevenstages.html">Seven Stages of Action</a></li>
+      <li><a href="goms.html">GOMS</a></li>
+      <li><a href="assignment01.html">HTML errors</a></li>
     </ul>
   </nav>
 
-  <!-- Main content landmark: unique content of this page -->
   <main>
     <section>
-      <!-- Section heading establishes content hierarchy -->
       <h2>Biography</h2>
-
-      <!-- Informative image with alternative text for accessibility -->
       <img src="norman.jpg" alt="Portrait of Don Norman">
 
       <p>
-        Don Norman is a pioneer in the field of Human–Computer Interaction,
-        known for his work on user-centered design, usability, and cognitive
-        engineering.
+        Don Norman is a pioneer in Human–Computer Interaction (HCI), known for his work on
+        user-centered design, usability, and cognitive engineering. He emphasizes designing
+        systems that match human behavior and thinking, making technology intuitive and easy to use.
+      </p>
+
+      <p>
+        Norman has worked as a cognitive scientist, engineer, and usability consultant. He
+        has held teaching and research positions at top universities, including the
+        University of California, San Diego, Northwestern University, and the University of
+        California, Berkeley.
+      </p>
+
+      <p>
+        He authored several influential books, including "The Design of Everyday Things," which
+        is widely considered a foundational text in design and usability. His work explores
+        how everyday objects, software, and interfaces can be designed to reduce errors,
+        increase efficiency, and improve user satisfaction.
+      </p>
+
+      <p>
+        Beyond academia, Norman has contributed to major technology companies as a consultant
+        and design advocate. He has influenced how software, websites, consumer electronics,
+        and even industrial products are developed to be human-centered.
+      </p>
+
+      <p>
+        His insights continue to guide designers and engineers worldwide, emphasizing that
+        good design is not just about aesthetics, but about understanding how humans think
+        and interact with technology.
       </p>
     </section>
   </main>
 
-  <!-- Footer contains meta or supplementary information -->
+  
   <footer>
+    <p><a href ="https://en.wikipedia.org/wiki/Don_Norman" >Reference</a></p>
     <p>&copy; 2026 HCI–CG Course</p>
-  <p>
-    <a href="assignment01.html">Lab 01 Instructions</a> |
-    <a href="https://github.com/humeraaa/hci-cg-2026">Starter Code</a> |
-    <a href="https://humeraaa.github.io/hci-cg-2026/">Live Demo</a>
-  </p>
+    <p>
+      <a href=https://github.com/Maha-Khan07/hci-cg-2026.git>Starter Code</a> |
+      <a href="https://humeraaa.github.io/hci-cg-2026/">Live Demo</a>
+    </p>
   </footer>
 
 </body>

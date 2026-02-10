@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOMS Cognitive Model</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333333;
+            font-size: 16px;
+        }
+
+        header {
+            color: #2c3e50;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #34495e;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: #555555;
+        }
+
+        nav a {
+            color: #2c3e50;
+            font-size: 1em;
+           
+        }
+
+        a[aria-current="page"] {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        ul {
+            color: #333333;
+        }
+
+        p {
+            color: #555555;
+            font-size: 1em;
+        }
+
+        footer {
+            color: #777777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GOMS Cognitive Model</h1>
+        <p><strong>HCI Alan Dix Chapter 12 12.2.1 pg 422-425</strong></p>
+        <p>Understanding Goals, Operators, Methods, and Selection in human-computer interaction.</p>
+    </header>
+
+    <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+      <li><a href="norman-sevenstages.html">Seven Stages of Action</a></li>
+      <li><a href="goms.html" aria-current="page">GOMS</a></li>
+      <li><a href="assignment01.html">HTML errors</a></li>
+    </ul>
+  </nav>
+
+
+    <main>
+        <section>
+            <h2>Introduction to GOMS</h2>
+            <p>The GOMS model (Card, Moran, and Newell) is a cognitive model used to analyze human-computer interaction. GOMS stands for:</p>
+            <ul>
+                <li>Goals: The user’s objectives, which act as memory points for evaluating actions.</li>
+                <li>Operators: Basic actions performed by the user, such as pressing a key or reading a dialog.</li>
+                <li>Methods: Sequences of operators to achieve a goal; multiple methods may exist for the same goal.</li>
+                <li>Selection rules: Rules that determine which method is chosen depending on context or user behavior.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Components Explained</h2>
+            <h3>Goals</h3>
+            <p>Goals describe what the user wants to achieve. They serve as reference points, allowing evaluation and correction if errors occur.</p>
+
+            <h3>Operators</h3>
+            <p>Operators are the smallest unit of action in the model. They can be physical (e.g., press 'X') or mental (e.g., read a dialog box). Granularity depends on analysis.</p>
+
+            <h3>Methods</h3>
+            <p>Methods are ways to achieve a goal by decomposing it into subgoals. For example, closing a window can be done by:</p>
+            <ul>
+                <li>CLOSE-METHOD: Using a pop-up menu</li>
+                <li>L7-METHOD: Pressing a function key</li>
+            </ul>
+
+            <h3>Selection Rules</h3>
+            <p>Selection rules determine which method to use.They depend on the particular user ,the system and the system state Example:</p>
+            <ul>
+                <li>User Sam: Rule 1 – Use CLOSE-METHOD unless another rule applies.</li>
+                <li>User Sam: Rule 2 – If application is 'blocks', use L7-METHOD.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Example: Editing a Manuscript</h2>
+            <p>High-level goals and subgoals:</p>
+            <ul>
+                <li>GOAL: EDIT-MANUSCRIPT
+                    <ul>
+                        <li>GOAL: EDIT-UNIT-TASK (repeat until all unit tasks are done)</li>
+                        <li>Operators: Basic actions like typing, deleting, moving cursor</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Example: Photocopying an Article</h2>
+            <ul>
+                <li>GOAL: PHOTOCOPY-PAPER
+                    <ul>
+                        <li>GOAL: LOCATE-ARTICLE</li>
+                        <li>GOAL: PHOTOCOPY-PAGE
+                            <ul>
+                                <li>GOAL: ORIENT-PAGE</li>
+                                <li>OPEN-COVER</li>
+                                <li>SELECT-PAGE</li>
+                                <li>POSITION-PAGE</li>
+                                <li>CLOSE-COVER</li>
+                                <li>GOAL: PRESS-COPY-BUTTON</li>
+                                <li>GOAL: VERIFY-COPY</li>
+                            </ul>
+                        </li>
+                        <li>GOAL: COLLECT-COPY
+                            <ul>
+                                <li>LOCATE-OUT-TRAY</li>
+                                <li>EXAMINE-COPY</li>
+                                <li>REMOVE-COPY</li>
+                            </ul>
+                        </li>
+                        <li>GOAL: RETRIEVE-JOURNAL</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>The closure problem occurs if the original journal is not removed from the copier while the copy has been collected. GOMS helps identify these issues.</p>
+        </section>
+
+        <section>
+            <h2>Comparison with Norman's Seven Stages of Action</h2>
+            <ul>
+                <li>Norman emphasizes user perception, intention, and evaluation (cognition-focused).</li>
+                <li>GOMS emphasizes detailed tasks and operators to predict performance (action-focused).</li>
+                <li>Norman explains why users act; GOMS explains what they do and how efficiently.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Design Focus</h2>
+            <p>GOMS has practical applications in design. For example, NYNEX used GOMS to analyze operator performance before installing a new system, identifying that it would slow down call processing, saving millions of dollars by avoiding implementation.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>End of GOMS Cognitive Model Explanation</p>
+    
+        <p><a href="index.html">Return to Home Page</a></p>
+    </footer>
+</body>
+</html>
